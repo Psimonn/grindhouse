@@ -5,6 +5,9 @@
 
 			<div class="grid">
 				<div class="grid-sizer"></div>
+				{{ range .Site.RegularPages -}}
+				<div><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+				{{ end -}}
 				<div class="grid-item"><img src="{{ .Site.BaseURL }}/images/img_01.jpg"></div>
 				<div class="grid-item"><img src="{{ .Site.BaseURL }}/images/img_02.jpg"></div>
 				<div class="grid-item"><img src="{{ .Site.BaseURL }}/images/img_03.jpg"></div>
