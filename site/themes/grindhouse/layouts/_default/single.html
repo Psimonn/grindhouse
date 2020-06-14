@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+<main class="l-main u-bg-white-100">
+
+<h1>{{ .Title }}</h1>
+
+セクション名: {{ with .Section }}{{ . }}{{ else }}なし{{ end }}
+
+<main>
+	{{ .Content }}
+</main>
+
+</main>
+
+{{ end }}

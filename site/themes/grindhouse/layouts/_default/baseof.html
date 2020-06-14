@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+	{{- partial "head.html" . -}}
+
+	<body class="drawer drawer--left u-bg-black-100">
+
+		{{- partial "header.html" . -}}
+
+		{{- block "main" . }}{{- end }}
+
+		{{- partial "footer.html" . -}}
+
+	</body>
+
+</html>

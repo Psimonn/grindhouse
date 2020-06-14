@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+	<main class="l-main u-bg-white-100">
+
+		<!-- セクション名: {{ with .Section }}{{ . }}{{ else }}なし{{ end }} -->
+		<section class="l-section">
+			<div class="l-section__inner">
+				<h1 class="p-title p-title--subpage">{{ .Title }}</h1>
+				<div>{{ .Content }}</div>
+			</div>
+		</section>
+
+	</main>
+
+{{ end }}
