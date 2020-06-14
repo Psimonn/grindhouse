@@ -1,3 +1,35 @@
 <footer class="text-center">
 	<small>&copy; grind house. All Right Reserved.</small>
 </footer>
+
+<script>
+	$(function(){
+		var randomContent = [];
+		$('.grid-item').each(function() {
+			randomContent.push($(this).html());
+		});
+
+		randomContent.sort(function() {
+			return Math.random() - Math.random();
+		});
+
+		$('.grid-item').empty();
+		i = 0;
+		$('.grid-item').each(function() {
+			$(this).append(randomContent[i]);
+			i++;
+		});
+
+		// init Masonry
+		var $grid = $('.grid').masonry({
+			itemSelector: '.grid-item',
+			percentPosition: true,
+			columnWidth: '.grid-sizer'
+		});
+
+		// layout Masonry after each image loads
+		$grid.imagesLoaded().progress( function() {
+			$grid.masonry();
+		});
+	});
+</script>
